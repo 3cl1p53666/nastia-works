@@ -1,0 +1,13 @@
+{# work-thumbnail.njk #}
+{# Use fileSlug if available, otherwise use data.slug or data.title as fallback #}
+{% set slug = item.fileSlug or item.data.slug or (item.data.title | lower | replace(" ", "-") ) %}
+<button class="work-thumbnail" data-micromodal-trigger="work-detail-modal" data-work-slug="{{ slug }}">
+  <img
+    src="{{ item.data.thumbnail }}"
+    alt="{{ item.data.title }}"
+    class="work-thumbnail__image"
+    loading="lazy">
+  <div class="work-thumbnail__overlay" aria-hidden="true">
+    <h3 class="work-thumbnail__title">{{ item.data.title }}</h3>
+  </div>
+</button>

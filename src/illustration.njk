@@ -1,0 +1,19 @@
+---
+layout: "layouts/gallery.njk"
+title: "Illustration"
+permalink: "/illustration/"
+description: "Digital and traditional illustrations"
+---
+<div class="gallery-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+
+{% if works and works | length > 0 %}
+  {% set workItems = works | reverse %}
+  <div class="gallery-grid">
+    {% for item in workItems %}
+      {% if item.data.category == 'illustration' %}
+        {% include "components/work-thumbnail.njk" %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <p>No works found.</p>
+{% endif %}

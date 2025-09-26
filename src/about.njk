@@ -1,0 +1,25 @@
+---
+layout: "layouts/base.njk"
+title: "About Me"
+permalink: "/about/"
+---
+
+<div class="about-page">
+  <div class="about-page__photo">
+    <img src="{{ contact.contact.photo }}" alt="{{ contact.contact.photo_alt }}">
+  </div>
+
+  <div class="about-page__content">
+    <h1 class="about-page__title">About Me</h1>
+    <div class="about-page__bio">
+      <p>{{ contact.contact.bio | safe }}</p>
+    </div>
+
+    <div class="about-page__contact-info">
+      <h2>Get In Touch</h2>
+      <p><strong>Email:</strong> <a href="mailto:{{ site.contact.email }}">{{ site.contact.email }}</a></p>
+      <p><strong>Status:</strong> {{ contact.contact.availability }}</p>
+    </div>
+
+  </div>
+</div>

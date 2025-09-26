@@ -1,0 +1,15 @@
+---
+permalink: "/api/works.json"
+eleventyExcludeFromCollections: true
+---
+{
+  {% for work in collections.works %}
+    "{{ work.fileSlug }}": {
+      "title": {{ work.data.title | jsonify | safe }},
+      "description": {{ work.data.description | jsonify | safe }},
+      "content": {{ work.templateContent | jsonify | safe }},
+      "media_items": {{ work.data.media_items | default([]) | jsonify | safe }}
+    }
+    {% if not loop.last %},{% endif %}
+  {% endfor %}
+}

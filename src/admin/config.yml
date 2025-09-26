@@ -1,0 +1,31 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "src/assets/works"
+public_folder: "/assets/works"
+
+collections:
+  - name: "works"
+    label: "Portfolio Works"
+    folder: "src/_works"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Category", name: "category", widget: "select", options: ["illustration", "motion-design", "books"] }
+      - { label: "Date", name: "date", widget: "date" }
+      - { label: "Thumbnail", name: "thumbnail", widget: "image" }
+      - { label: "Description", name: "description", widget: "markdown" }
+      - {
+          label: "Media Items",
+          name: "media_items", 
+          widget: "list",
+          fields: [
+            { label: "Type", name: "type", widget: "select", options: ["image", "video"] },
+            { label: "URL", name: "url", widget: "image", required: false },
+            { label: "Alt Text", name: "alt", widget: "string" },
+            { label: "Video Provider", name: "provider", widget: "select", options: ["youtube", "vimeo"], required: false },
+            { label: "Video ID", name: "video_id", widget: "string", required: false }
+          ]
+        }

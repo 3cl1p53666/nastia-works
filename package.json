@@ -1,0 +1,27 @@
+{
+  "name": "portfolio-website",
+  "version": "1.0.0",
+  "description": "test description",
+  "main": "index.js",
+  "scripts": {
+    "build:css": "sass src/assets/css/main.scss _site/assets/css/main.css",
+    "watch:css": "npm run build:css -- --watch",
+    "start": "npm-run-all --parallel watch:css \"eleventy:serve\"",
+    "eleventy:serve": "eleventy --serve",
+    "build": "eleventy && npm run build:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "gsap": "^3.13.0",
+    "micromodal": "^0.6.1",
+    "sass": "^1.90.0"
+  },
+  "devDependencies": {
+    "js-yaml": "^4.1.0",
+    "npm-run-all": "^4.1.5"
+  }
+}

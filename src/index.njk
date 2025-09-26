@@ -1,0 +1,12 @@
+---
+layout: "layouts/base.njk"
+title: "Home"
+---
+
+<section class="categories.categories">
+  <div class="categories__grid">
+    {% for card in categories.categories %}
+      {% include "components/category-card.njk" %}
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,18 @@
+categories:
+- id: "illustration"
+  name: "Illustration"
+  slug: "illustration"
+  description: "Digital and traditional illustrations"
+  thumbnail: "/assets/images/placeholder-600x400.png"
+
+- id: "motion-design"
+  name: "Motion Design"
+  slug: "motion-design" 
+  description: "Animated graphics and motion pieces"
+  thumbnail: "/assets/images/placeholder-600x400.png"
+
+- id: "books"
+  name: "Books"
+  slug: "books"
+  description: "Book covers and editorial design"
+  thumbnail: "/assets/images/placeholder-600x400.png"

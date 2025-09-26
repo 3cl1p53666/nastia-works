@@ -1,0 +1,17 @@
+// This is the main entry point for our styles. It imports the partials.
+@import 'variables';
+@import 'layout';
+@import 'components';
+// ... (base styles)
+// ... (keep the existing body and h1 styles)
+body {
+  background-color: var(--color-bg-page);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}

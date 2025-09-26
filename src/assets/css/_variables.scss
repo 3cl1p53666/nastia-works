@@ -1,0 +1,17 @@
+// This file holds all the design tokens from your specification.
+:root {
+  /* Colors */
+  --color-bg-page: #f2e7d3;
+  --color-text-primary: #32150f;
+  --color-text-secondary: #84715f;
+  --color-accent-primary: #ccb43e;
+
+  /* Typography */
+  --font-heading: 'Bodoni Moda', serif;
+  --font-body: 'Montserrat', sans-serif;
+  --font-size-base: 1rem;
+  
+  /* Layout */
+  --container-max: 1200px;
+  --container-padding: 2rem;
+}

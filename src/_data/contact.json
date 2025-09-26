@@ -1,0 +1,14 @@
+{
+  "contact": {
+    "photo": "/assets/images/placeholder-400x500.png",
+    "photo_alt": "A photo of the artist",
+    "bio": "Digital artist and designer with 5+ years of experience creating compelling visual narratives. Specializing in character design, motion graphics, and editorial illustration.",
+    "services": [
+      "Digital Illustration",
+      "Character Design",
+      "Motion Graphics",
+      "Book Cover Design"
+    ],
+    "availability": "Available for freelance projects"
+  }
+}

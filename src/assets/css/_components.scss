@@ -1,0 +1,169 @@
+/* --- Category Grid --- */
+.categories__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+/* --- Category Card Component --- */
+.category-card {
+  background: var(--color-bg-page);
+  border: 1px solid var(--color-text-primary);
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s ease-out;
+
+  &:hover {
+    transform: scale(1.05);
+    border-color: var(--color-accent-primary);
+    box-shadow: 0 4px 16px rgba(50, 21, 15, 0.15);
+  }
+
+  &__image {
+    width: 100%;
+    height: 400px; // A fixed height for uniformity
+    object-fit: cover;
+    display: block;
+    background-color: #cccccc; // Placeholder background
+  }
+
+  &__content {
+    padding: 1.5rem;
+  }
+
+  &__title {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+}
+
+/* --- Gallery Grid --- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(600px, 1fr));
+  gap: 2rem;
+}
+
+/* --- Work Thumbnail Component --- */
+.work-thumbnail {
+  position: relative; // Needed for positioning the overlay
+  display: block;
+  border: 1px solid var(--color-text-primary);
+  overflow: hidden; // Hides the part of the overlay that slides in
+  text-decoration: none;
+  transition: transform 0.3s ease-out;
+
+  &:hover {
+    transform: scale(1.01); // A slightly more subtle scale than the home page
+    
+    .work-thumbnail__overlay {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  &__image {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  &__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(242, 231, 211, 0.95); // A semi-transparent version of our page background
+    padding: 1rem;
+    
+    // Hidden by default
+    opacity: 0;
+    transform: translateY(100%);
+    transition: all 0.3s ease-out;
+  }
+
+  &__title {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--color-text-primary);
+    margin: 0;
+  }
+}
+
+/* --- Modal Component --- */
+.modal {
+  display: none; // Hidden by default
+
+  &.is-open {
+    display: block; // Shown when active
+  }
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--color-overlay, rgba(50, 21, 15, 0.8));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+
+.modal__container {
+  background-color: var(--color-bg-page);
+  padding: 2rem;
+  width: 90%;
+  max-width: 900px; /* Or another max-width you prefer */
+  max-height: 90vh;
+  overflow-y: auto;
+  border-radius: var(--border-radius, 8px);
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-text-primary);
+  padding-bottom: 1rem;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.modal__close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.modal-description {
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
