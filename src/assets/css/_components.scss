@@ -1,9 +1,9 @@
-/* --- Category Grid --- */
+/* --- Category Grid (Mobile-First: Single Column) --- */
 .categories__grid {
-  display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  grid-template-columns: repeat(auto-fit, minmax(300px, 420px)); // Responsive columns: fit as many as possible, with a minimum width of 420px and a max of 1fr (letting them grow to fill space)
-  gap: clamp(10px, 5vw, 150px); //Responsive gap: min 10px, scales with viewport, max 50px
+  display: flex;
+  flex-direction: column; /* Default layout is a single column */
+  align-items: center; /* Center the column's items */
+  gap: 2rem; /* Vertical spacing between cards in the column */
 }
 
 /* --- Category Card Component --- */
@@ -13,20 +13,21 @@
   text-decoration: none;
   display: block;
   transition: all 0.3s ease-out;
+  width: 100%; // Default sizing for single-column view
+  max-width: 420px; // Max size for the "full-sized" card
 
   &:hover {
-    transform: scale(1.05);
+    transform: none;
     border-color: var(--color-accent-primary);
     box-shadow: 0 4px 16px rgba(50, 21, 15, 0.15);
   }
 
   &__image {
     width: 100%;
-    // height: 400px; // A fixed height for uniformity
-    aspect-ratio: 1 / 1; // Enforces a square shape
+    aspect-ratio: 1 / 1; /* Enforces a square shape */
     object-fit: cover;
     display: block;
-    background-color: #cccccc; // Placeholder background
+    background-color: #cccccc; /* Placeholder background */
   }
 
   &__content {
@@ -38,6 +39,22 @@
     font-size: 1.5rem;
     color: var(--color-text-primary);
     margin: 0;
+  }
+}
+
+/* --- Media Query for Wide Screens (Single Row Layout) --- */
+/* This activates when the screen is wide enough for 3 cards (3*300px) + padding */
+@media (min-width: 1000px) {
+  .categories__grid {
+    flex-direction: row; /* Switch to a row layout */
+    align-items: stretch; /* Make cards have equal height */
+    gap: clamp(0px, 2vw, 50px); /* Your flexible gap for the row */
+  }
+
+  .category-card {
+    /* Override sizing for row view */
+    flex: 1 1 300px; /* Allow cards to grow/shrink from a 300px base */
+    max-width: none; /* Remove the max-width to allow growing */
   }
 }
 
