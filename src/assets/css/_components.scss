@@ -1,8 +1,9 @@
 /* --- Category Grid --- */
 .categories__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  // grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 420px)); // Responsive columns: fit as many as possible, with a minimum width of 420px and a max of 1fr (letting them grow to fill space)
+  gap: clamp(10px, 5vw, 150px); //Responsive gap: min 10px, scales with viewport, max 50px
 }
 
 /* --- Category Card Component --- */
@@ -21,7 +22,8 @@
 
   &__image {
     width: 100%;
-    height: 400px; // A fixed height for uniformity
+    // height: 400px; // A fixed height for uniformity
+    aspect-ratio: 1 / 1; // Enforces a square shape
     object-fit: cover;
     display: block;
     background-color: #cccccc; // Placeholder background
