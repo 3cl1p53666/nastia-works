@@ -1,3 +1,12 @@
-<a href="/{{ card.slug }}/" class="category-card">
-  <img src="{{ card.thumbnail }}" alt="{{ card.name }}" class="category-card__image">
-</a>
+<div class="category-card">
+  <a href="{{ card.slug | url }}" class="category-card__link">
+    <img
+      src="{{ card.thumbnail | url }}"
+      alt="{{ card.alt or 'Thumbnail for ' + card.name }}"
+      loading="lazy"
+      class="category-card__image"
+      width="400"
+      height="300">
+    <h3 class="category-card__title">{{ card.name }}</h3>
+  </a>
+</div>
