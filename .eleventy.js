@@ -50,9 +50,9 @@ module.exports = function(eleventyConfig) {
       .sort((a, b) => b.date - a.date); // Sorts newest first
   });
 
-  eleventyConfig.addCollection("motionDesign", function(collectionApi) {
+  eleventyConfig.addCollection("animation", function(collectionApi) {
     return collectionApi.getFilteredByGlob("src/_works/*.md")
-      .filter(item => item.data.category === "motion-design")
+      .filter(item => item.data.category === "animation")
       .sort((a, b) => b.date - a.date);
   });
   

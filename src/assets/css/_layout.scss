@@ -17,18 +17,28 @@
   text-align: center;
 }
 
+.site-header__graphic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2.0rem; // Adds space between the graphic and the title
+  width: 50px;
+  height: 50px;
+}
+
 .site-header__branding {
   font-family: 'Bodoni Moda', serif;
-  font-size: 3.5rem; // Corresponds to --font-size-4xl in the spec
-  letter-spacing: 0.1em; // Gives that wide-spaced look
+  font-size: 3.5rem; // Corresponds to --font-size-4xl
+  letter-spacing: none; // Gives that wide-spaced look
   text-transform: none;
   color: var(--color-text-primary);
-  margin-bottom: 2.5rem;
+  margin-bottom: 2.0rem;
+  text-decoration: none;
 }
 
 .site-header__nav {
   display: flex;
-  gap: 3rem; // Space between navigation items
+  gap: 5rem; // Space between navigation items
 }
 
 .site-header__nav a {
