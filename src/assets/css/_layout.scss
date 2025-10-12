@@ -65,6 +65,7 @@ main {
   padding-top: 2rem;
   padding-bottom: 1rem;
   color: var(--color-text-secondary);
+  font-family: Fixel-L, sans-serif;
   font-size: 0.875rem; // Corresponds to --font-size-sm
 }
 
@@ -74,6 +75,7 @@ main {
   grid-template-columns: 1fr; // Single column by default for mobile
   gap: 3rem;
   align-items: start;
+  font-family: Fixel-L, sans-serif;
 }
 
 // Media query for screens 768px and wider (tablets and desktops)
@@ -87,7 +89,7 @@ main {
   width: 100%;
   height: auto;
   display: block;
-  border: 1px solid var(--color-text-primary);
+  border: none;
 }
 
 .about-page__bio {
