@@ -27,7 +27,7 @@
 }
 
 .site-header__branding {
-  font-family: 'Bodoni Moda', serif;
+  font-family: 'Yeseva One', serif;
   font-size: 3.5rem; // Corresponds to --font-size-4xl
   letter-spacing: none; // Gives that wide-spaced look
   text-transform: none;
@@ -44,12 +44,12 @@
 .site-header__nav a {
   font-family: Fixel-L, sans-serif;
   text-decoration: none;
-  color: var(--color-text-secondary);
+  color: var(--color-accent-primary);
   font-size: var(--font-size-base);
   transition: color 0.3s ease-out;
 
   &:hover {
-    color: var(--color-accent-primary);
+    color: var(--color-text-secondary);
   }
 }
 

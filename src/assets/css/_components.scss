@@ -14,7 +14,7 @@
     position: relative; /* This is the anchor for positioning the title */
     border-radius: var(--border-radius-base);
     overflow: hidden; /* Keeps everything contained within the rounded corners */
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     color: var(--color-light);
   }
@@ -65,7 +65,7 @@
   .categories__grid {
     flex-direction: row; /* Switch to a row layout */
     align-items: stretch; /* Make cards have equal height */
-    gap: clamp(0px, 2vw, 50px); /* Your flexible gap for the row */
+    gap: clamp(50px, 5vw, 150px); /* Your flexible gap for the row */
   }
 
   .category-card {
