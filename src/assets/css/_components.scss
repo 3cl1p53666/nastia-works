@@ -8,37 +8,54 @@
 
 /* --- Category Card Component --- */
 .category-card {
-  background: var(--color-bg-page);
-  border: none;
-  text-decoration: none;
-  display: block;
-  transition: all 0.3s ease-out;
-  width: 100%; // Default sizing for single-column view
-  max-width: 420px; // Max size for the "full-sized" card
-
-  &:hover {
-    transform: none;
-    border-color: var(--color-accent-primary);
-    box-shadow: 0 4px 16px rgba(50, 21, 15, 0.15);
+  text-align: center;
+  &__link {
+    display: block;
+    position: relative; /* This is the anchor for positioning the title */
+    border-radius: var(--border-radius-base);
+    overflow: hidden; /* Keeps everything contained within the rounded corners */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: var(--color-light);
   }
 
   &__image {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* Enforces a square shape */
-    object-fit: cover;
     display: block;
-    background-color: #cccccc; /* Placeholder background */
-  }
-
-  &__content {
-    padding: 1.5rem;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
   }
 
   &__title {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
-    color: var(--color-text-primary);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
     margin: 0;
+    padding: 1rem;
+    font-family: var(--font-body);
+    font-size: var(--font-size-md);
+    font-weight: 500;
+    color: #FFFFFF;
+    
+    /* Hide by default */
+    opacity: 0;
+    transform: translateY(20px); 
+    transition: opacity 0.5s ease-in-out, transform 0.8s ease-in-out;
+  }
+
+  /* Add the dark overlay and show the title on hover */
+  &__link:hover,
+  &__link:focus-visible {
+    .category-card__image {
+      transform: scale(1.00); /* We can keep a subtle zoom on the image itself */
+    }
+
+    .category-card__title {
+      opacity: 1;
+      transform: translateY(0);
+      background-color: rgb(200, 200, 200, 0.5);
+    }
   }
 }
 

@@ -3,9 +3,9 @@ layout: "layouts/base.njk"
 title: "Home"
 ---
 
-<section class="categories.categories">
+<section class="categories">
   <div class="categories__grid">
-    {% for card in categories.categories %}
+    {% for card in categories %}
       {% include "components/category-card.njk" %}
     {% endfor %}
   </div>

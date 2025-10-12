@@ -10,7 +10,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/_works");
   eleventyConfig.addPassthroughCopy("src/admin");
 
-  // Force YAML parsing for categories.yml
+  // ==> THIS IS THE CORRECTED DATA LOADING FUNCTION <==
+  // It reads your simplified YAML file and makes it available as "categories".
   eleventyConfig.addGlobalData("categories", () => {
     const fileContents = fs.readFileSync("./src/_data/categories.yml", "utf8");
     return yaml.load(fileContents);
