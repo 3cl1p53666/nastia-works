@@ -86,7 +86,7 @@
 .work-thumbnail {
   position: relative; // Needed for positioning the overlay
   display: block;
-  border: 1px solid var(--color-text-primary);
+  border: none;
   overflow: hidden; // Hides the part of the overlay that slides in
   text-decoration: none;
   transition: transform 0.3s ease-out;
