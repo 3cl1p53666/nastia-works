@@ -13,7 +13,7 @@ collections:
     slug: "{{slug}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Category", name: "category", widget: "select", options: ["illustration", "motion-design", "books"] }
+      - { label: "Category", name: "category", widget: "select", options: ["illustration", "animation", "books"] }
       - { label: "Date", name: "date", widget: "date" }
       - { label: "Thumbnail", name: "thumbnail", widget: "image" }
       - { label: "Description", name: "description", widget: "markdown" }
