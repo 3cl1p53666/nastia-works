@@ -20,7 +20,7 @@ window.addEventListener('load', () => {
       ease: 'power2.out'
     }, "-=0.4") // Start this animation 0.4s before the previous one ends
      .fromTo('.category-card',
-      { y: -50, opacity: 0 },              // from
+      { y: 50, opacity: 0 },              // from
       { y: 0, opacity: 1, duration: 0.6, stagger: 0.2, ease: 'power2.out' }, // to
       "-=0.3"    //tl.set('.category-card', { opacity: 1 }, "-=0.0")
     )
