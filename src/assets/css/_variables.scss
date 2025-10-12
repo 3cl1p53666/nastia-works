@@ -6,11 +6,19 @@
   --color-text-secondary: #84715f;
   --color-accent-primary: #ccb43e;
 
-  /* Typography */
-  --font-heading: 'Bodoni Moda', serif;
-  --font-body: 'Montserrat', sans-serif;
-  --font-size-base: 1rem;
-  
+  @font-face {
+  font-family: 'Fixel-L';
+  src: url('../fonts/FixelDisplay-Light.woff2') format('woff2');
+  font-weight: light;
+  font-style: normal;
+  font-display: swap;
+}
+
+$font-family-base: 'Fixel-L', sans-serif;
+$font-family-heading: 'Bodoni Moda', serif;
+$font-size-base: 16px;
+$line-height-base: 1.6;
+
   /* Layout */
   --container-max: 1600px;
   --container-padding: 2rem;

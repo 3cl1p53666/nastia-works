@@ -18,10 +18,10 @@
 }
 
 .site-header__branding {
-  font-family: var(--font-heading);
-  font-size: 2.5rem; // Corresponds to --font-size-4xl in the spec
-  letter-spacing: 0.2em; // Gives that wide-spaced look
-  text-transform: uppercase;
+  font-family: 'Bodoni Moda', serif;
+  font-size: 3.5rem; // Corresponds to --font-size-4xl in the spec
+  letter-spacing: 0.1em; // Gives that wide-spaced look
+  text-transform: none;
   color: var(--color-text-primary);
   margin-bottom: 2.5rem;
 }
@@ -32,7 +32,7 @@
 }
 
 .site-header__nav a {
-  font-family: var(--font-body);
+  font-family: Fixel-L, sans-serif;
   text-decoration: none;
   color: var(--color-text-secondary);
   font-size: var(--font-size-base);
