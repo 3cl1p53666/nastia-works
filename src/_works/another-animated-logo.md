@@ -1,6 +1,6 @@
 ---
 title: Another animated logo
-category: motion-design
+category: animation
 thumbnail: /assets/works/1_znnmnta.gif
 description: Another animated logo description
 media_items:

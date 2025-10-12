@@ -4,9 +4,9 @@
   description: "Digital and traditional illustrations"
   thumbnail: "/assets/images/placeholder-420x420.png"
 
-- id: "motion-design"
-  name: "Motion Design"
-  slug: "motion-design" 
+- id: "animation"
+  name: "Animation"
+  slug: "animation" 
   description: "Animated graphics and motion pieces"
   thumbnail: "/assets/images/placeholder-420x420.png"
 
